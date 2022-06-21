@@ -10,6 +10,6 @@ To follow Threads and Executors section:
 * [CallablesAndFutures](src/main/java/concurrency/threadsandexecutors/CallablesAndFutures.java)
 * [ExecutorInvokeAll](src/main/java/concurrency/threadsandexecutors/ExecutorInvokeAll.java)
 * [ExecutorInvokeAny](src/main/java/concurrency/threadsandexecutors/ExecutorInvokeAny.java)
-
+* [ScheduledExecutors](src/main/java/concurrency/threadsandexecutors/ScheduledExecutors.java)
 
 This project has no unit tests, there are some comments along the code to explain important topics or some ideas.
