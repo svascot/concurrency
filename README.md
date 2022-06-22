@@ -12,4 +12,7 @@ To follow Threads and Executors section:
 * [ExecutorInvokeAny](src/main/java/concurrency/threadsandexecutors/ExecutorInvokeAny.java)
 * [ScheduledExecutors](src/main/java/concurrency/threadsandexecutors/ScheduledExecutors.java)
 
+To follow Synchronization and Locks section:
+* [SynchronizedExamples](src/main/java/concurrency/synchronizationandlocks/SynchronizedExamples.java)
+
 This project has no unit tests, there are some comments along the code to explain important topics or some ideas.
