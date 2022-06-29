@@ -14,6 +14,6 @@ To follow Threads and Executors section:
 
 To follow Synchronization and Locks section:
 * [SynchronizedExamples](src/main/java/concurrency/synchronizationandlocks/SynchronizedExamples.java)
-* [ReentrantLockExmaple](src/main/java/concurrency/synchronizationandlocks/ReentrantLockExmaple.java)
+* [ReentrantLockExample](src/main/java/concurrency/synchronizationandlocks/ReentrantLockExample.java)
 
 This project has no unit tests, there are some comments along the code to explain important topics or some ideas.
