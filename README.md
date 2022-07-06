@@ -16,5 +16,6 @@ To follow Synchronization and Locks section:
 * [SynchronizedExamples](src/main/java/concurrency/synchronizationandlocks/SynchronizedExamples.java)
 * [ReentrantLockExample](src/main/java/concurrency/synchronizationandlocks/ReentrantLockExample.java)
 * [ReadWriteLockExample](src/main/java/concurrency/synchronizationandlocks/ReadWriteLockExample.java)
+* [StampedLockExample](src/main/java/concurrency/synchronizationandlocks/StampedLockExample.java)
 
 This project has no unit tests, there are some comments along the code to explain important topics or some ideas.
