@@ -19,4 +19,8 @@ To follow Synchronization and Locks section:
 * [StampedLockExample](src/main/java/concurrency/synchronizationandlocks/StampedLockExample.java)
 * [SemaphoresExample](src/main/java/concurrency/synchronizationandlocks/SemaphoresExample.java)
 
+To follow Atomic Variables and ConcurrentMap section:
+* [AtomicIntegerExample](src/main/java/concurrency/atomicvariables/AtomicIntegerExample.java)
+
+
 This project has no unit tests, there are some comments along the code to explain important topics or some ideas.
