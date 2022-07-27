@@ -15,6 +15,11 @@ public class AtomicIntegerExample {
     // Using the compare-and-swap atomic instruction (CAS) that is supported by most of the modern CPUs
     // That's why atomic operations can be faster that using synchronized locks.
     public static void main(String[] args) {
+        atomicIntExample();
+        lambdaExample();
+    }
+
+    private static void atomicIntExample() {
         ExecutorService executor = Executors.newFixedThreadPool(2);
         AtomicInteger atomicInt = new AtomicInteger(0);
 
@@ -24,4 +29,22 @@ public class AtomicIntegerExample {
 
         System.out.println(atomicInt.get());
     }
+    private static void lambdaExample() {
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+        AtomicInteger atomicInt = new AtomicInteger(0);
+
+        // updateAndGet accepts lambda expressions to perform arithmetic operations.
+        IntStream.range(0,1000).forEach(i -> {
+            Runnable task = () -> {
+                atomicInt.updateAndGet(operand -> operand + 2);
+            };
+            executor.submit(task);
+        });
+
+        stop(executor);
+
+        System.out.println(atomicInt.get());
+    }
+
+
 }
