@@ -17,6 +17,7 @@ public class AtomicIntegerExample {
     public static void main(String[] args) {
         atomicIntExample();
         lambdaExample();
+        accumulateAndGetExample();
     }
 
     private static void atomicIntExample() {
@@ -35,9 +36,7 @@ public class AtomicIntegerExample {
 
         // updateAndGet accepts lambda expressions to perform arithmetic operations.
         IntStream.range(0,1000).forEach(i -> {
-            Runnable task = () -> {
-                atomicInt.updateAndGet(operand -> operand + 2);
-            };
+            Runnable task = () -> atomicInt.updateAndGet(operand -> operand + 2);
             executor.submit(task);
         });
 
@@ -46,5 +45,19 @@ public class AtomicIntegerExample {
         System.out.println(atomicInt.get());
     }
 
+    private static void accumulateAndGetExample() {
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+        AtomicInteger atomicInt = new AtomicInteger(0);
 
+        // The method accumulateAndGet accepts a IntBinaryOperator lambda,
+        // This example is used to sum all the values from 0 to 1000 concurrently
+        IntStream.range(0, 1000).forEach(i -> {
+            Runnable task = ()-> atomicInt.accumulateAndGet(i, (n,m) -> n + m);
+            executor.submit(task);
+        });
+
+        stop(executor);
+
+        System.out.println(atomicInt.get());
+    }
 }
