@@ -21,6 +21,7 @@ To follow Synchronization and Locks section:
 
 To follow Atomic Variables and ConcurrentMap section:
 * [AtomicIntegerExample](src/main/java/concurrency/atomicvariables/AtomicIntegerExample.java)
+* [LongAdderAndLongAccumulator](src/main/java/concurrency/atomicvariables/LongAdderAndLongAccumulator.java)
 
 
 This project has no unit tests, there are some comments along the code to explain important topics or some ideas.
